@@ -9,7 +9,7 @@ import MovieProvider from './Context/MovieContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Book-My-Show">
       <MovieProvider>
         <App />
       </MovieProvider>
