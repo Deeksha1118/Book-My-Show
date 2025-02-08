@@ -3,10 +3,10 @@ import HeroSlider from "react-slick";
 import { NextArrow, PrevArrow} from './ArrowsComponent';
 
 const HeroCarousel = () => {
-    const [images, setImages] = useState([
+    const [images] = useState([
         {
             adult: false,
-            backdrop_path: "/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg",
+            backdrop_path: "/rqgeBNWXas1yrAyXxwi9CahfScx.jpg",
             genre_ids: [16, 878, 28],
             id: 610150,
             original_language: "ja",
@@ -23,7 +23,7 @@ const HeroCarousel = () => {
           },
           {
             adult: false,
-            backdrop_path: "/rqgeBNWXas1yrAyXxwi9CahfScx.jpg",
+            backdrop_path: "/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg",
             genre_ids: [53],
             id: 985939,
             original_language: "en",
@@ -47,7 +47,6 @@ const HeroCarousel = () => {
         infinite: true,
         speed: 500,
         slideToScroll: 1,
-        slidesToShow: 3,
         autoplay: true,
         autoplaySpeed: 2000,
         cssEase: "linear",
@@ -61,40 +60,39 @@ const HeroCarousel = () => {
         infinite: true,
         speed: 500,
         slideToScroll: 1,
-        slidesToShow: 3,
         autoplay: true,
         autoplaySpeed: 2000,
         cssEase: "linear",
         nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        prevArrow: <PrevArrow />
     };
     
     return (
         <>
             <div className='lg:hidden'>
                 <HeroSlider {...settingsSM}>
-                {
-                    images.map((image, index) => {
+                {images.map((images, index) => {
+                    return (
                         <div className='w-full h-56 md:h-80 py-3' key ={index}>
                             <img src = {`https://image.tmdb.org/t/p/original${images.backdrop_path}`} 
                             alt = 'Hero Banner' 
                             className = 'w-full h-full rounded-md object-cover' />
                         </div>
-                    })
-                }
+                    );
+                })}
                 </HeroSlider>
             </div>
             <div className='hidden lg:block'>
                 <HeroSlider {...settingsLG}>
-                {
-                    images.map((image, index) => {
+                {images.map((images, index) => {
+                    return (
                         <div className='w-full h-96 px-2 py-3' key = {index}>
                             <img src = {`https://image.tmdb.org/t/p/original${images.backdrop_path}`} 
                             alt = 'Hero Banner' 
                             className = 'w-full h-full rounded-md object-cover' />
                         </div>
-                    })
-                }
+                    );
+                })}
                 </HeroSlider>
             </div>
         </>
