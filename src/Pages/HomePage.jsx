@@ -61,9 +61,9 @@ const HomePage = () => {
                 <div className='container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3'>
                     <div className='hidden md:flex'>
                         <img 
-                        // src = "https://tse2.mm.bing.net/th?id=OIP.iQ67dhqj6zBviinrywWy7gHaEO&pid=Api&P=0&h=180" 
+                        src = "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png" 
                         alt = "Rupay" 
-             
+                        className='w-full h-full'
                         />
                     </div>
                     <PosterSlider 
