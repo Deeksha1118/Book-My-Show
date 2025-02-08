@@ -62,7 +62,7 @@ const HomePage = () => {
                     <div className='hidden md:flex'>
                         <img 
                         src = "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png" 
-                        alt = "Rupay" 
+                        alt = "Premier" 
                         className='w-full h-full'
                         />
                     </div>
